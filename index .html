@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pet Cuddle Clinic — Home</title>
+  <link rel="icon" type="img/png" href="./images/log.png">
+
+  <!-- Fonts: Baloo 2 (cursive brand) + Poppins (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet (same folder) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ======================
+       NAVBAR (shared on all pages)
+       - NOTE: anchors use class="nav-link"
+       - No link is 'active' by default; JS will add .active on click
+       ====================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Logo area (replace images/logo.png) -->
+      <a class="logo" href="index.html" aria-label="Pet Cuddle Clinic home">
+        <img src="./images/log.png" alt="Pet Cuddle Clinic logo" class="logo-img" width="100" height="200">
+        <span class="brand">Pet Cuddle Clinic</span>
+      </a>
+
+      <!-- Mobile menu button (visible on small screens) -->
+      <button id="menuToggle" class="menu-toggle" aria-label="Open navigation">☰</button>
+
+      <!-- Main navigation -->
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list" id="navList">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+
+          <!-- Services with small dropdown preview (optional) -->
+    <li class="has-drop">
+  <a href="services.html" class="nav-link">Services ▾</a>
+
+  <ul class="drop">
+
+    <!-- 1. General Veterinary Care -->
+    <li><a href="service1.html">General Veterinary Care</a></li>
+
+    <!-- 2. Pet Grooming & Spa -->
+    <li><a href="service2.html">Pet Grooming & Spa</a></li>
+
+    <!-- 3. Specialized Treatments -->
+    <li><a href="services.html#specialized">Specialized Treatments</a></li>
+
+    <!-- 4. Diagnostics -->
+    <li><a href="service3.html">Diagnostics</a></li>
+
+    <!-- 5. Emergency & Critical Care -->
+    <li><a href="services.html#emergency">Emergency & Critical Care</a></li>
+
+    <!-- 6. Nutrition & Diet Plans -->
+    <li><a href="services.html#nutrition">Nutrition & Diet Plans</a></li>
+    <!-- 7. Behavior & Training Support -->
+    <li><a href="services.html#behavior">Behavior & Training Support</a></li>
+
+    <!-- 8. Pet Boarding & Daycare -->
+    <li><a href="services.html#boarding">Pet Boarding & Daycare</a></li>
+
+    <!-- 9. Exotic Pets Care -->
+    <li><a href="services.html#exotic-care">Exotic Pets</a></li>
+
+  </ul>
+</li>
+          <li><a href="appointment.html" class="nav-link">Book Appointment</a></li>
+          <li><a href="team.html" class="nav-link">Our Team</a></li>
+          <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+
+          <!-- Login/Register -->
+          <li><a href="login.html" class="nav-link login-btn">Login / Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================
+       HERO (collage: 1 main image + mini strip)
+       ====================== -->
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <!-- LEFT: headline + CTA + mini-strip -->
+        <div class="hero-left">
+          <h1 class="hero-title">Warm, gentle care for every paw and wing.</h1>
+          <p class="hero-sub">Pet Cuddle Clinic — expert vets, compassionate staff, caring for dogs, cats, birds, rabbits, reptiles and more.</p>
+
+          <div class="cta-row">
+            <a class="cta-bubble" href="appointment.html" aria-label="Book appointment">
+              <span class="paw">🐾</span>
+              <span class="cta-text">Book Appointment</span>
+            </a>
+          </div>
+
+          <div class="trust-row">
+            <div class="trust-item">🩺 Experienced Vets</div>
+            <div class="trust-item">💉 Vaccination Plans</div>
+            <div class="trust-item">🧴 Grooming & Spa</div>
+            <div class="trust-item">🐦 Exotic Pet Care</div>
+          </div>
+
+          <!-- Mini thumbnail strip — optional; swap images in /images/strip1.jpg etc. -->
+          <div class="mini-strip" aria-hidden="true">
+            <img src="./images/interior design.png" alt="Clinic interior thumbnail" >
+            <img src="./images/front cat and dog.png" alt="Vet with pet thumbnail">
+            <img src="./images/front happy pets.png" alt="Happy pet thumbnail">
+          </div>
+        </div>
+
+        <!-- RIGHT: image collage -->
+        <div class="hero-images" aria-hidden="false">
+
+          <!-- MAIN HERO IMAGE (clinic building / broad hero) -->
+          <div class="hero-img main-img">
+            <img src="images/clinic picture.png" alt="Clinic building or hero image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================
+         SERVICES (emoji-only, multicolor pastel cards)
+         ====================== -->
+    <section class="services container" id="services">
+      <h2 class="section-title">Services — for every kind of pet</h2>
+      <p class="section-sub">From routine checkups to specialized care for exotic companions — choose the right care for your animal.</p>
+
+      <div class="services-grid">
+        <article class="service-card card-pink">
+          <div class="service-ico">🩺</div>
+          <h3>General Checkup</h3>
+          <p>Full wellness exams and preventive care.</p>
+        </article>
+
+        <article class="service-card card-mint">
+          <div class="service-ico">💉</div>
+          <h3>Vaccination</h3>
+          <p>Custom vaccination schedules & reminders.</p>
+        </article>
+
+        <article class="service-card card-lav">
+          <div class="service-ico">✂️</div>
+          <h3>Grooming & Spa</h3>
+          <p>Gentle baths, trims and coat care.</p>
+        </article>
+
+        <article class="service-card card-blue">
+          <div class="service-ico">🏥</div>
+          <h3>Surgery & Emergency</h3>
+          <p>Safe surgical care and emergency stabilization.</p>
+        </article>
+
+        <article class="service-card card-yellow">
+          <div class="service-ico">🛁</div>
+          <h3>Bath & Coat Care</h3>
+          <p>Skin-friendly shampoos and soothing baths.</p>
+        </article>
+
+        <article class="service-card card-peach">
+          <div class="service-ico">🍖</div>
+          <h3>Nutrition & Diet</h3>
+          <p>Meal plans for growth, weight and medical needs.</p>
+        </article>
+
+        <article class="service-card card-mint-2">
+          <div class="service-ico">🦜</div>
+          <h3>Bird & Aviary Care</h3>
+          <p>Feather, beak and habitat guidance.</p>
+        </article>
+
+        <article class="service-card card-pink-2">
+          <div class="service-ico">🐇</div>
+          <h3>Small Mammal Care</h3>
+          <p>Dental checks, diet and housing advice.</p>
+        </article>
+
+        <article class="service-card card-lav-2">
+          <div class="service-ico">🐢</div>
+          <h3>Reptile & Exotic Pets</h3>
+          <p>Temperature-sensitive care & parasite checks.</p>
+        </article>
+
+        <article class="service-card card-blue-2">
+          <div class="service-ico">🐾</div>
+          <h3>Training Basics</h3>
+          <p>Behavior consults and positive-reward training.</p>
+        </article>
+
+        <article class="service-card card-yellow-2">
+          <div class="service-ico">🧪</div>
+          <h3>Lab Tests & Diagnostics</h3>
+          <p>Bloodwork, x-rays and rapid in-house tests.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ======================
+         WHY CHOOSE US
+         ====================== -->
+    <section class="why container" id="why">
+      <h2 class="section-title">Why Pet Cuddle Clinic?</h2>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-ico">👩‍⚕️</div>
+          <h4>Skilled Vets</h4>
+          <p>Cross-species expertise for companion & exotic animals.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-ico">🧼</div>
+          <h4>Hygienic Facilities</h4>
+          <p>Strict cleaning and comfortable recovery areas.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-ico">⏱️</div>
+          <h4>Swift Appointments</h4>
+          <p>Online booking, reminders and punctual consultations.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-ico">❤️</div>
+          <h4>Gentle Handling</h4>
+          <p>Kindness and patience are standard in every treatment.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================
+         GALLERY (preview)
+         ====================== -->
+    <section class="gallery container">
+      <h2 class="section-title">Pet Moments</h2>
+      <div class="gallery-grid">
+        <img src="./images/pet gallery 1.png" alt="happy rabbit">
+        <img src="./images/pet gallery 2.png" alt="groomed dog">
+        <img src="./images/pet gallery 3.png" alt="cat checkup">
+        <img src="./images/pet gallery 4.png" alt="playtime">
+      </div>
+    </section>
+
+    <!-- ======================
+         TEAM
+         ====================== -->
+    <section class="team container" id="team">
+      <h2 class="section-title">Meet Our Team</h2>
+      <p class="section-sub">Professional & caring — the people behind Pet Cuddle Clinic</p>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="./images/dr.REENA.png" alt="Dr. Reena Shah">
+          <h4>Dr. Reena Shah</h4>
+          <p>Senior Veterinarian</p>
+        </div>
+
+        <div class="team-card">
+          <img src="./images/dr.KARAN.png" alt="Dr. Karan Joshi">
+          <h4>Dr. Karan Joshi</h4>
+          <p>Surgeon</p>
+        </div>
+
+        <div class="team-card">
+          <img src="./images/dr.RIYA.png" alt="Dr. Rina Das">
+          <h4>Dr. Rina Das</h4>
+          <p>Exotics Specialist</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================
+         TESTIMONIALS
+         ====================== -->
+    <section class="testimonials container" id="testimonials">
+      <h2 class="section-title">What Owners Say</h2>
+
+      <div class="testi-grid">
+        <blockquote class="testi-card">
+          <p>“Pet Cuddle Clinic cared for our parrot — patient, kind and professional.”</p>
+          <footer>— HEMA SAKSHI</footer>
+        </blockquote>
+
+        <blockquote class="testi-card">
+          <p>“Excellent care for our rabbit — great follow-up and support.”</p>
+          <footer>— ANASUYA</footer>
+        </blockquote>
+
+         <blockquote class="testi-card">
+          <p>"Will Frequently visit for my Cat -Pretty's Checkup here only , great work Docs”</p>
+          <footer>— TRISHIKA</footer>
+        </blockquote>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================
+       FOOTER
+       ====================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <img src="./images/log.png" alt="Pet Cuddle Clinic logo" width="56">
+        <p>Pet Cuddle Clinic — gentle care for every companion.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>+91 98765 43210</p>
+        <p>hello@petcuddleclinic.com</p>
+        <p>Open: Mon–Sat 9:00–18:00</p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>© <span id="year"></span> Pet Cuddle Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ======================
+       SCRIPTS
+       - set year
+       - mobile menu toggle
+       - active nav link toggle (pink only when clicked)
+       ====================== -->
+  <script>
+    // set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navList = document.getElementById('navList');
+    menuToggle.addEventListener('click', () => {
+      navList.classList.toggle('open');
+    });
+
+    // Active nav link: make clicked link pink (only while on the page)
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        navLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
