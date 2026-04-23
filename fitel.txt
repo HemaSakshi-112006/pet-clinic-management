@@ -1,30 +1,30 @@
-✂️ Hair Trimming & Styling
+<div class="service-card">
+        <h2>🔬 Sample Analysis</h2>
+        <p>Detailed examination of samples to identify infections and internal issues.</p>
+        <ul>
+          <li>Urine Analysis</li>
+          <li>Stool Analysis</li>
+          <li>Microscopy</li>
+        </ul>
+      </div>
 
-Breed-appropriate trims or owner-preferred styles, done patiently without rushing or force.
+      <!-- Card 3 -->
+      <div class="service-card">
+        <h2>🩻 Imaging Services</h2>
+        <p>Advanced imaging techniques for accurate internal diagnosis.</p>
+        <ul>
+          <li>X-Ray</li>
+          <li>Ultrasound</li>
+        </ul>
+      </div>
 
-🪮 De-Shedding & Coat Conditioning
-
-Removal of loose fur and knots to keep coats soft, shiny, and tangle-free.
-
-👂 Ear Cleaning
-
-Gentle ear care to prevent infections, odor, and wax buildup.
-
-🦷 Basic Oral Hygiene
-
-Light mouth checks and breath-freshening care for overall hygiene.
-
-✋ Nail Trimming & Paw Care
-
-Safe nail clipping and paw pad care to prevent pain and walking issues.
-
-🧼 Flea & Tick Bath (If Needed)
-
-Special medicated baths to remove parasites and soothe irritated skin.
-
-🐾 Special Spa Comforts
-
-✨ Calm environment with soft colors & soothing sounds
-✨ One-on-one grooming — no overcrowding
-✨ Breaks for anxious or senior pets
-✨ Vet supervision for sensitive pets
+      <!-- Card 4 -->
+      <div class="service-card">
+        <h2>🌿 Specialized Diagnostics</h2>
+        <p>Targeted tests for precise diagnosis and personalized treatment.</p>
+        <ul>
+          <li>Allergy Tests</li>
+          <li>Hormone Imbalance Detection</li>
+          <li>Chronic Disease Screening</li>
+        </ul>
+      </div>
