@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Appointment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Book Appointment</h2>
+
+<form id="form">
+  <input id="pet" placeholder="Pet Name" required><br><br>
+  <input id="owner" placeholder="Owner Name" required><br><br>
+  <input id="phone" placeholder="Phone" required><br><br>
+  <input type="date" id="date" required><br><br>
+  <input type="time" id="time" required><br><br>
+  <input id="service" placeholder="Service" required><br><br>
+
+  <button type="submit">Book</button>
+</form>
+
+<p id="msg"></p>
+
+<script>
+document.getElementById("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const response = await fetch("http://127.0.0.1:5000/api/appointments", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      petName: document.getElementById("pet").value,
+      ownerName: document.getElementById("owner").value,
+      phone: document.getElementById("phone").value,
+      date: document.getElementById("date").value,
+      time: document.getElementById("time").value,
+      service: document.getElementById("service").value
+    })
+  });
+
+  const data = await response.json();
+  document.getElementById("msg").innerText = data.message;
+});
+</script>
+
+</body>
+</html>
