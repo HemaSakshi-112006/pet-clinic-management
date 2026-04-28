@@ -374,6 +374,12 @@ nav a.active {
   color: #6b6b6b;
   line-height: 1.5;
 }
+.service-card ul{
+   font-family: 'Baloo 2', cursive;
+  font-size: 0.95rem;
+  color: #6b6b6b;
+  line-height: 1.5;
+}
 
 
 /* ---------- CTA BUTTON ---------- */
