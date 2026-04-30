@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Emergency — Pet Cuddle Clinic</title>
+  <link rel="icon" type="image/png" href="images/title logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="emergency1.css" />
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="./images/log.png" height="36" alt="Pet Cuddle Clinic"> Pet Cuddle Clinic
+  </a>
+  <div class="nav-call">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.6a16 16 0 0 0 6 6l1.27-.85a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 18v-1.08z"/>
+    </svg>
+    <a href="tel:+919876543210">+91 98765 43210</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-icon">🚨</div>
+  <h1>Pet Emergency?</h1>
+  <p>Fill this short form so our team can prepare. Takes under a minute.</p>
+</div>
+
+<div class="call-strip">
+  <div>
+    <div class="call-strip-text">Prefer to call directly?</div>
+    <div class="call-strip-num">+91 98765 43210</div>
+  </div>
+  <a class="btn-call" href="tel:+919876543210">📞 Call now</a>
+</div>
+
+<div class="progress-bar">
+  <div class="prog-seg active" id="p1"></div>
+  <div class="prog-seg" id="p2"></div>
+  <div class="prog-seg" id="p3"></div>
+</div>
+
+<div class="container">
+
+  <!-- Replace YOUR_FORM_ID with your Formspree ID -->
+  <form id="emergencyForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+    <input type="hidden" name="Emergency Type" id="h_type" />
+    <input type="hidden" name="Pet Name"        id="h_petname" />
+    <input type="hidden" name="Species"         id="h_species" />
+    <input type="hidden" name="Breed"           id="h_breed" />
+    <input type="hidden" name="Age"             id="h_age" />
+    <input type="hidden" name="Situation"       id="h_situation" />
+    <input type="hidden" name="Owner Name"      id="h_owner" />
+    <input type="hidden" name="Phone"           id="h_phone" />
+    <input type="hidden" name="Address"         id="h_address" />
+    <input type="hidden" name="Locality"        id="h_locality" />
+    <input type="hidden" name="City"            id="h_city" />
+    <input type="hidden" name="Landmark"        id="h_landmark" />
+    <input type="hidden" name="_subject" value="🚨 NEW PET EMERGENCY ALERT" />
+
+    <!-- STEP 1 -->
+    <div class="step-panel active" id="step1">
+      <div class="step-header">
+        <div class="step-meta">Step 1 of 3</div>
+        <h2 class="step-title">What's happening?</h2>
+        <p class="step-sub">Select the emergency type so our team can prepare the right equipment.</p>
+      </div>
+
+      <div class="type-grid">
+        <button type="button" class="type-btn selected" data-type="Accident / Trauma" onclick="selectType(this)">
+          <span class="ico">🚗</span><span class="lbl">Accident / trauma</span>
+        </button>
+        <button type="button" class="type-btn" data-type="Poisoning" onclick="selectType(this)">
+          <span class="ico">☠️</span><span class="lbl">Poisoning</span>
+        </button>
+        <button type="button" class="type-btn" data-type="Breathing Issue" onclick="selectType(this)">
+          <span class="ico">😮‍💨</span><span class="lbl">Breathing issue</span>
+        </button>
+        <button type="button" class="type-btn" data-type="Seizure" onclick="selectType(this)">
+          <span class="ico">🫀</span><span class="lbl">Seizure</span>
+        </button>
+        <button type="button" class="type-btn" data-type="Bleeding" onclick="selectType(this)">
+          <span class="ico">🩸</span><span class="lbl">Bleeding</span>
+        </button>
+        <button type="button" class="type-btn" data-type="Other / Unsure" onclick="selectType(this)">
+          <span class="ico">❓</span><span class="lbl">Other / unsure</span>
+        </button>
+      </div>
+
+      <div class="card">
+        <div class="card-title">About the pet</div>
+        <div class="two-col">
+          <div class="field">
+            <label>Pet's name *</label>
+            <input type="text" id="petName" placeholder="e.g. Max" required />
+          </div>
+          <div class="field">
+            <label>Species *</label>
+            <select id="species" required>
+              <option value="">Select...</option>
+              <option>Dog</option>
+              <option>Cat</option>
+              <option>Rabbit</option>
+              <option>Bird</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="field">
+            <label>Breed</label>
+            <input type="text" id="breed" placeholder="e.g. Labrador" />
+          </div>
+          <div class="field">
+            <label>Age</label>
+            <input type="text" id="petAge" placeholder="e.g. 3 years" />
+          </div>
+        </div>
+        <div class="field">
+          <label>Describe what happened *</label>
+          <textarea id="situation" placeholder="e.g. Was hit by a car, limping and bleeding from the leg..." required></textarea>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Your contact details</div>
+        <div class="two-col">
+          <div class="field">
+            <label>Your name *</label>
+            <input type="text" id="ownerName" placeholder="Full name" required />
+          </div>
+          <div class="field">
+            <label>Phone number *</label>
+            <input type="tel" id="phone" placeholder="+91 98765 XXXXX" required />
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn-primary" onclick="goStep2()">
+        Next — enter your location →
+      </button>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step-panel" id="step2">
+      <div class="step-header">
+        <div class="step-meta">Step 2 of 3</div>
+        <h2 class="step-title">Where are you?</h2>
+        <p class="step-sub">So we know where you're coming from. We'll have the team ready.</p>
+      </div>
+
+      <div class="gps-box" onclick="detectLocation()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF6FAF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+        </svg>
+        <p>Use my current location</p>
+        <span id="gpsStatus">Tap to auto-detect via GPS</span>
+      </div>
+
+      <div class="or-divider">or enter manually</div>
+
+      <div class="card">
+        <div class="field">
+          <label>Street address *</label>
+          <input type="text" id="address" placeholder="e.g. 12, MG Road" required />
+        </div>
+        <div class="two-col">
+          <div class="field">
+            <label>Area / locality</label>
+            <input type="text" id="locality" placeholder="e.g. Koramangala" />
+          </div>
+          <div class="field">
+            <label>City *</label>
+            <input type="text" id="city" placeholder="e.g. Bengaluru" required />
+          </div>
+        </div>
+        <div class="field">
+          <label>Landmark (optional)</label>
+          <input type="text" id="landmark" placeholder="e.g. near Jyoti Nivas College" />
+        </div>
+      </div>
+
+      <div class="map-placeholder" id="mapBox">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6FAF" stroke-width="1.5">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+        <span>Map preview will appear here</span>
+        <small>Auto-loads when GPS is detected</small>
+      </div>
+
+      <button type="button" class="btn-primary" onclick="goStep3()">Notify the clinic →</button>
+      <button type="button" class="btn-back" onclick="goStep(1)">← Back</button>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step-panel" id="step3">
+      <div class="confirm-top">
+        <div class="success-check">✅</div>
+        <h2 class="step-title">Clinic notified!</h2>
+        <p class="step-sub">Our team is preparing for your arrival. Head here now.</p>
+      </div>
+
+      <div class="confirm-banner">
+        <div class="ico">🏥</div>
+        <div>
+          <h3>Pet Cuddle Clinic — ready for you</h3>
+          <p id="confirmMsg">Head to the clinic now. The emergency bay will be ready on arrival.</p>
+        </div>
+      </div>
+
+      <div class="card summary-card">
+        <div class="card-title">What we've sent to the clinic</div>
+        <div class="row"><span>Emergency type</span><span id="s_type">—</span></div>
+        <div class="row"><span>Pet</span><span id="s_pet">—</span></div>
+        <div class="row"><span>Owner</span><span id="s_owner">—</span></div>
+        <div class="row"><span>Phone</span><span id="s_phone">—</span></div>
+        <div class="row"><span>Location</span><span id="s_location">—</span></div>
+      </div>
+
+      <div class="card">
+        <div class="first-aid-header" id="faTitle">While you travel — first aid tips</div>
+        <div id="faList"></div>
+      </div>
+
+      <div class="call-strip bottom-call-strip">
+        <div>
+          <div class="call-strip-text">Need to speak with a vet?</div>
+          <div class="call-strip-num">+91 98765 43210</div>
+        </div>
+        <a class="btn-call" href="tel:+919876543210">📞 Call</a>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+<script src="emergency.js"></script>
+</body>
+</html>
