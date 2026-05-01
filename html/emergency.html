@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pet Emergency — Pet Cuddle Clinic</title>
   <link rel="icon" type="image/png" href="images/title logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="emergency.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="/css/emergency.css" />
 </head>
 <body>
 
 <nav>
   <a class="nav-logo" href="index.html">
-    <img src="./images/log.png" height="36" alt="Pet Cuddle Clinic"> Pet Cuddle Clinic
+    <img src="/images/log.png" height="36" alt="Pet Cuddle Clinic"> Pet Cuddle Clinic
   </a>
   <div class="nav-call">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -71,7 +71,7 @@
       </div>
 
       <div class="type-grid">
-        <button type="button" class="type-btn selected" data-type="Accident / Trauma" onclick="selectType(this)">
+        <button type="button" class="type-btn " data-type="Accident / Trauma" onclick="selectType(this)">
           <span class="ico">🚗</span><span class="lbl">Accident / trauma</span>
         </button>
         <button type="button" class="type-btn" data-type="Poisoning" onclick="selectType(this)">
@@ -239,6 +239,6 @@
   </form>
 </div>
 
-<script src="emergency.js"></script>
+<script src="/javascript/emergency.js"></script>
 </body>
 </html>
