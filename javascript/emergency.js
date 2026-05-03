@@ -93,7 +93,8 @@ function goStep2() {
   goStep(2);
 }
 
-function goStep3() {
+function goStep3(e) {
+  if (e) e.preventDefault();
   if (
     !document.getElementById('address').value.trim() ||
     !document.getElementById('city').value.trim()

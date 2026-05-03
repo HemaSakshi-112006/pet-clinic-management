@@ -46,7 +46,7 @@
 <div class="container">
 
   <!-- Replace YOUR_FORM_ID with your Formspree ID -->
-  <form id="emergencyForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+  <form id="emergencyForm" action="https://formspree.io/f/xvzlzjdo" method="POST" onsubmit="return false">
 
     <input type="hidden" name="Emergency Type" id="h_type" />
     <input type="hidden" name="Pet Name"        id="h_petname" />
@@ -193,7 +193,7 @@
         <small>Auto-loads when GPS is detected</small>
       </div>
 
-      <button type="button" class="btn-primary" onclick="goStep3()">Notify the clinic →</button>
+      <button type="button" class="btn-primary" onclick="goStep3(event)">Notify the clinic →</button>
       <button type="button" class="btn-back" onclick="goStep(1)">← Back</button>
     </div>
 

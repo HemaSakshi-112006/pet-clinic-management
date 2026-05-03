@@ -232,13 +232,20 @@ nav {
 .btn-primary:active { transform: scale(0.98); }
 .btn-primary:disabled { background: #ddb8cb; cursor: not-allowed; box-shadow: none; }
 
+
 .btn-back {
-  width: 100%; padding: 11px; background: transparent;
-  color: var(--muted); border: 1px solid var(--baby-pink);
-  border-radius: var(--radius-sm); font-size: 14px;
-  font-family: 'DM Sans', sans-serif; cursor: pointer; margin-top: 8px;
+  width: 100%; padding: 13px;
+  background: var(--accent); color: var(--white);
+  border: none; border-radius: var(--radius-sm);
+  font-size: 15px; font-weight: 600;
+  font-family: 'Baloo 2',cursive;
+  cursor: pointer; margin-top: 14px;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 4px 14px rgba(255,111,175,0.3);
 }
-.btn-back:hover { background: var(--accent-light); }
+.btn-back:hover { background: var(--accent-dark); }
+.btn-primary:active { transform: scale(0.98); }
+.btn-primary:disabled { background: #ddb8cb; cursor: not-allowed; box-shadow: none; }
 
 /* STEP PANELS */
 .step-panel { display: none; }
