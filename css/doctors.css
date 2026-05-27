@@ -126,8 +126,8 @@
 /* ── GRID ── */
 .doc-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
 }
 
 /* ── CARD ── */
@@ -320,8 +320,8 @@
   width: 100%;
   text-align: center;
   padding: 10px 0;
-  background: var(--accent);
-  color: var(--white);
+  background:  #F7C8D0;
+  color: #4A4A4A;
   border-radius: 10px;
   font-size: 13px;
   font-weight: 600;
